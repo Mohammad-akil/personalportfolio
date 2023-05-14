@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "react-alice-carousel/lib/alice-carousel.css";
 
 .customGradient {
   background: -webkit-linear-gradient(180deg, #13b0f5 -2.06%, #e70faa 100%);

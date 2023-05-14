@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import ProjectSection from "./components/ProjectSection";
 import TechStack from "./components/TechStack";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Navbar />
       <HeroSection />
       <TechStack />
+      <ProjectSection />
     </div>
   );
 };
