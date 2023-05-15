@@ -9,7 +9,7 @@ const TechCarousel = () => {
     .map((items, i) => (
       <img
         key={i}
-        className="cursor-pointer mx-auto w-24 md:w-28 m-1"
+        className="cursor-pointer mx-auto w-24 p-2 m-1"
         src={items}
         alt={items}
       />
@@ -19,7 +19,7 @@ const TechCarousel = () => {
     .map((items, i) => (
       <img
         key={i}
-        className="cursor-pointer mx-auto  m-1 "
+        className="cursor-pointer mx-auto w-24 p-2  m-1 "
         src={items}
         alt={items}
       />

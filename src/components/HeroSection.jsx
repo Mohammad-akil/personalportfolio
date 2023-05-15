@@ -3,7 +3,7 @@ import Heroimg from "../assets/images/fotor-ai-20230510101929.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div className=" grow mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:mt-4 xl:mt-0 lg:grid-cols-2 gap-3 md:gap-5 justify-stretch xl:py-32">
         <div className="justify-items-start mx-auto flex items-center">
           <img
