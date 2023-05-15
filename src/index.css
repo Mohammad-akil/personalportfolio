@@ -25,6 +25,10 @@
   border-radius: 8px;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #13b0f5 -2.06%, #e70faa 100%);
