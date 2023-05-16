@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const [data, setData] = useState();
@@ -15,14 +15,14 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast("data uploaded successfully");
+
+    console.log("i called");
   };
 
   return (
-    <div id="contact" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-      <ToastContainer />
+    <section id="contact" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <section
-        className="border rounded-xl"
+        className="border rounded-2xl bg-slate-100"
         style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px" }}
       >
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -36,7 +36,7 @@ const ContactUs = () => {
           <form onSubmit={handleSubmit} className="space-y-8">
             <div>
               <label
-                for="email"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900 "
               >
                 Your email
@@ -53,7 +53,7 @@ const ContactUs = () => {
             </div>
             <div>
               <label
-                for="subject"
+                htmlFor="subject"
                 className="block mb-2 text-sm font-medium text-gray-900 "
               >
                 Subject
@@ -70,7 +70,7 @@ const ContactUs = () => {
             </div>
             <div className="sm:col-span-2">
               <label
-                for="message"
+                htmlFor="message"
                 className="block mb-2 text-sm font-medium text-gray-900 "
               >
                 Your message
@@ -93,7 +93,7 @@ const ContactUs = () => {
           </form>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 
