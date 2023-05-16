@@ -25,6 +25,7 @@ const App = () => {
       />
       <Navbar />
       <HeroSection />
+      <AboutSection />
       <TechStack />
       <ProjectSection />
       <ContactUs />

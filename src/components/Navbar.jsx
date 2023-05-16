@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { navigation } from "../constants/navlink";
 import { CiLinkedin } from "react-icons/ci";
 import { FiGithub, FiTwitter } from "react-icons/fi";
@@ -102,8 +102,10 @@ const Navbar = () => {
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <button
-                            href="#"
+                          <a
+                            href="https://www.linkedin.com/in/mohammad-akil-3b0438203/"
+                            target="_blank"
+                            rel="noreferrer"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700 w-full"
@@ -113,13 +115,15 @@ const Navbar = () => {
                               <CiLinkedin size={25} />
                               <span>Linkdein</span>
                             </div>
-                          </button>
+                          </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <button
-                            href="#"
+                          <a
+                            href="https://github.com/Mohammad-akil/"
+                            target="_blank"
+                            rel="noreferrer"
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700 w-full"
@@ -129,7 +133,7 @@ const Navbar = () => {
                               <FiGithub size={25} />
                               Github
                             </div>
-                          </button>
+                          </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const [data, setData] = useState();
@@ -15,8 +14,7 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log("i called");
+    console.log(data);
   };
 
   return (
