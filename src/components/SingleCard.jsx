@@ -7,7 +7,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
 
-const SingleCard = ({ title, description, deployLink, githubLink }) => {
+const SingleCard = ({
+  title,
+  description,
+  deployLink,
+  githubLink,
+  techStack,
+  image,
+}) => {
   return (
     <Card
       sx={{
@@ -17,23 +24,31 @@ const SingleCard = ({ title, description, deployLink, githubLink }) => {
       }}
     >
       <CardMedia
-        sx={{ height: 240 }}
-        image="https://media.istockphoto.com/id/1420039900/photo/cyber-security-ransomware-email-phishing-encrypted-technology-digital-information-protected.webp?s=1024x1024&w=is&k=20&c=IF7urJ01pDieoE-QDg-hrMNL82vG3LCYnYjG2yGDN1o="
+        sx={{ height: 230 }}
+        className="border-t-2 border-x-2 "
+        image={
+          image
+            ? image
+            : "https://media.istockphoto.com/id/1420039900/photo/cyber-security-ransomware-email-phishing-encrypted-technology-digital-information-protected.webp?s=1024x1024&w=is&k=20&c=IF7urJ01pDieoE-QDg-hrMNL82vG3LCYnYjG2yGDN1o="
+        }
         title="green iguana"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {title}
+          {title ? title : "Upcoming title"}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {description}
+        <Typography variant="body1" color="text.secondary">
+          {description ? description : "upcomng descreption"}
+        </Typography>
+        <Typography variant="body2" color="blue">
+          {techStack ? techStack : "upcomng stack"}
         </Typography>
       </CardContent>
       <CardActions className="flex justify-between mx-2 mb-2">
-        <Button size="small">
+        <Button size="small" href={deployLink} target="_blank">
           <AiOutlineLink size={20} /> <span className="ml-1">Live Preview</span>
         </Button>
-        <Button size="small">
+        <Button size="small" href={githubLink} target="_blank">
           <AiOutlineGithub size={24} />
           <span className="ml-1">View Code</span>
         </Button>
