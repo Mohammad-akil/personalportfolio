@@ -83,11 +83,13 @@ const Navbar = () => {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://media.licdn.com/dms/image/D4D03AQEqOOhFA4XPrw/profile-displayphoto-shrink_100_100/0/1671196374874?e=1689206400&v=beta&t=ridO3X1L8pegZxNYv_HMDhj1t24qxFlNZ5CMECqKce8"
-                        alt="Profile"
-                      />
+                      <div className="hover:p-0.5 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-full">
+                        <img
+                          className="h-8 w-8 rounded-full"
+                          src="https://media.licdn.com/dms/image/D4D03AQEqOOhFA4XPrw/profile-displayphoto-shrink_100_100/0/1671196374874?e=1689206400&v=beta&t=ridO3X1L8pegZxNYv_HMDhj1t24qxFlNZ5CMECqKce8"
+                          alt="Profile"
+                        />
+                      </div>
                     </Menu.Button>
                   </div>
                   <Transition
