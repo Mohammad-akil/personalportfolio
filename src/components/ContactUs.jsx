@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { CircularProgress } from "@mui/material";
 
 const ContactUs = () => {
-  const [data, setData] = useState();
-  const handleChange = (e) => {
-    e.preventDefault();
-    const name = e.target.name;
-    const value = e.target.value;
-    setData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const form = useRef();
+  const [isdone, setisDone] = useState(false);
 
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
-    console.log(data);
-  };
-
+    setisDone(true);
+    emailjs
+      .sendForm(
+        "service_f31s2xj",
+        "template_xoplvwo",
+        e.target,
+        "eoWAhQwK3TjOw1CYt"
+      )
+      .then((result) => {
+        setisDone(false);
+        e.target.reset();
+      })
+      .catch((err) => console.log(err));
+  }
   return (
     <section id="contact" className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <section
@@ -31,7 +36,7 @@ const ContactUs = () => {
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form ref={form} onSubmit={handleSubmit} className="space-y-8">
             <div>
               <label
                 htmlFor="email"
@@ -43,7 +48,6 @@ const ContactUs = () => {
                 type="email"
                 id="email"
                 name="email"
-                onChange={handleChange}
                 className="shadow-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-700 focus:border-indigo-800 block w-full p-2.5 focus:outline"
                 placeholder="sample@gmail.com"
                 required
@@ -60,7 +64,6 @@ const ContactUs = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                onChange={handleChange}
                 className="shadow-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-700 focus:border-indigo-800 block w-full p-2.5 focus:outline"
                 placeholder="Let us know how we can help you"
                 required
@@ -76,7 +79,6 @@ const ContactUs = () => {
               <textarea
                 id="message"
                 rows="6"
-                onChange={handleChange}
                 name="message"
                 className="shadow-lg bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-indigo-700 focus:border-indigo-800 block w-full p-2.5 focus:outline"
                 placeholder="Leave a comment..."
@@ -84,9 +86,13 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="text-white w-full md:w-max bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800"
+              className="text-white w-full md:w-max bg-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 focus:outline-none dark:focus:ring-indigo-800 flex justify-center items-center"
             >
-              Send message
+              {isdone ? (
+                <CircularProgress size={25} sx={{ color: "white" }} />
+              ) : (
+                "Send message"
+              )}
             </button>
           </form>
         </div>
