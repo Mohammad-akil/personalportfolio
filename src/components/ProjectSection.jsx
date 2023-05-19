@@ -8,7 +8,7 @@ const ProjectSection = () => {
         <p className="font-bold mt-11 md:mt-14 lg:mt-20 xl:mt-3 text-2xl md:text-3xl lg:text-5xl text-indigo-900">
           Projects
         </p>
-        <p className="font-semibold text-lg md:text-xl lg:text-2xl md:-tracking-tighter text-indigo-700">
+        <p className="font-bold text-lg md:text-xl lg:text-2xl md:-tracking-tighter text-black">
           Things I’ve built so far
         </p>
       </div>

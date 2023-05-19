@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { CircularProgress } from "@mui/material";
+import { toast } from "react-toastify";
 
 const ContactUs = () => {
   const form = useRef();
@@ -18,6 +19,7 @@ const ContactUs = () => {
       )
       .then((result) => {
         setisDone(false);
+        toast("👏 Message sent successfully");
         e.target.reset();
       })
       .catch((err) => console.log(err));
@@ -29,10 +31,10 @@ const ContactUs = () => {
         style={{ boxShadow: "rgba(0, 0, 0, 0.25) 0px 25px 50px -12px" }}
       >
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-indigo-900">
+          <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-center text-indigo-900">
             Contact Us
           </h2>
-          <p className="mb-8 lg:mb-16 font-light text-center text-indigo-700 sm:text-xl">
+          <p className="mb-8 lg:mb-16  text-center text-black font-bold sm:text-xl">
             Got a technical issue? Want to send feedback about a beta feature?
             Need details about our Business plan? Let us know.
           </p>
