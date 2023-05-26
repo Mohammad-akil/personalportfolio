@@ -1,7 +1,7 @@
 import admindashboard from "../assets/images/admin dashboard.jpg";
 import google from "../assets/images/google clone.jpg";
 import jilanityres from "../assets/images/jilani tyres.jpg";
-
+import weather from "../assets/images/weather app.jpg";
 export const cards = [
   {
     title: "Google-clone",
@@ -31,13 +31,13 @@ export const cards = [
     githubLink: "https://github.com/Mohammad-akil/JilaniTyres",
   },
   {
-    title: "",
-    image: "",
+    title: "Weather app",
+    image: weather,
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techStack: "",
-    deployLink: "",
-    githubLink: "",
+      "With this app, users can effortlessly stay updated with real-time weather information for any location worldwide.",
+    techStack: "React openweather api",
+    deployLink: "https://weatherapp-react-1.netlify.app/",
+    githubLink: "https://github.com/Mohammad-akil/react-weather-app",
   },
   {
     title: "",
