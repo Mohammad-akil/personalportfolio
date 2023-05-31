@@ -4,4 +4,5 @@ export const navigation = [
   { name: "TechStack", href: "#techstack", current: false },
   { name: "Projects", href: "#projects", current: false },
   { name: "Contact", href: "#contact", current: false },
+  { name: "smaple", href: "#contact", current: false },
 ];
