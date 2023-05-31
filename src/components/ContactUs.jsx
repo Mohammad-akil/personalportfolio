@@ -32,7 +32,7 @@ const ContactUs = () => {
       >
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-center text-indigo-900">
-            Contact Us
+            Contact Me
           </h2>
           <p className="mb-8 lg:mb-16  text-center text-black font-bold sm:text-xl">
             Got a technical issue? Want to send feedback about a beta feature?
